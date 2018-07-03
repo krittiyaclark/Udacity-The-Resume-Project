@@ -49,12 +49,12 @@ var bio = {
 var education = {
 	schools: [
 		{
-	        name: "Udacity",
-	        location: "San Francisco, USA",
-	        degree: "Certificate",
-	        majors: ["Grow with Google Nanodegree Front-End- Webdevelopment"],
-	        dates: "2018",
-	        url: "http://www.udacity.com"
+	        "name": "Comunity College of Vermont",
+	        "location": "Vermont, USA",
+	        "degree": "Certificate",
+	        "majors": ["Web design"],
+	        "dates": "2011",
+	        "url": "http://www.udacity.com"
  		}
  	],
     onlineCourses: [
@@ -67,17 +67,17 @@ var education = {
 	],
     display: function () {
     	if (education.schools.length > 0 || education.onlineCourses.length > 0) {
-    		for (var i = 0; i < education.schools; i++) {
-    			var formattedName = HTMLschoolName.replace("%data%", education.schools[i].name);
-    			var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
-    			var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
-    			var formattedSchoolDate = HTMLschoolSchoolDate.replace("%data%", education.schools[i].dates);
-    			var formattedNameDegree = formattedName + formattedDegree;
+			for (var i = 0, iLen = education.schools.length; i < iLen; i++) {
+				var formattedName = HTMLschoolName.replace("%data%", education.schools[i].name);
+				var formattedDegree = HTMLschoolDegree.replace("%data%", education.schools[i].degree);
+				var formattedSchoolDates = HTMLschoolDates.replace("%data%", education.schools[i].dates);
+				var formattedLocation = HTMLschoolLocation.replace("%data%", education.schools[i].location);
+				var formattedNameDegree = formattedName + formattedDegree;
 
-    			$("#education").append(HTMLschoolStart);
-		        $(".education-entry:last").append(formattedNameDegree);
-		        $(".education-entry:last").append(formattedSchoolDates);
-		        $(".education-entry:last").append(formattedLocation);
+				$('#education').append(HTMLschoolStart);
+				$('.education-entry:last').append(formattedNameDegree);
+				$('.education-entry:last').append(formattedSchoolDates);
+				$('.education-entry:last').append(formattedLocation);
 
     		for (var j = 0, jLen = education.schools[i].majors.length; j < jLen; j++) {
       			var formattedMajor = HTMLschoolMajor.replace("%data%", education.schools[i].majors[j]);
