@@ -12,7 +12,7 @@ var bio = {
         linkedin: "https://www.linkedin.com/in/krittiya-clark-front-end",
         location: "Vermont, USA"
         },
-    welcomeMessage: "I am a self-taught Front-end web developer passion for learning and eager to use my web development experience to create clean, modern, and responsive web applications.",
+    welcomeMessage: "I am a self-taught Front-end web developer passion for learning. Analytical problem solver with the ability to quickly learn new technologies and languages. Skilled multi-tasker who is comfortable working within a team and independently.",
     skills: ["HTML5", "CSS3", "Bootstrap", "JavaScript", "SASS", "Gulp", "Webpack", "Jamine", "Git", "GitHub"],
     biopic: "images/Krittiya_Clark.png",
     display: function () {
